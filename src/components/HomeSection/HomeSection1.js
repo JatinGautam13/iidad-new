@@ -16,7 +16,7 @@ export default function HomeSection1() {
 
   return (
     <section className={styles.heroBg}>
-      <h2 className={styles.Logo}>iidad.com</h2>
+      <h2 className={styles.Logo}>iidad</h2>
         
       <div className={styles.heroRow} ref={heroRowRef}>
         
