@@ -1,22 +1,18 @@
+import AboutSection1 from "@/components/AboutSection/AboutSection1";
+import AboutSection2 from "@/components/AboutSection/AboutSection2";
+import HomeSection7 from "@/components/HomeSection/HomeSection7";
 import "@/styles/blog.css";
 
 export const metadata = {
-  title: "Contact",
+  title: "About",
 };
 
-export default function ContactPage() {
+export default function AboutPage() {
   return (
-    <main id="main-content" className="blog-index" role="main">
-      <header className="blog-index__hero">
-        <div>
-          <p className="eyebrow">Support</p>
-          <h1>Contact Us</h1>
-          <p>
-            This is a placeholder contact page. Replace it with your preferred form service or embed your CRM when
-            you clone the template for a new brand.
-          </p>
-        </div>
-      </header>
+    <main >
+      <AboutSection1 />
+      <AboutSection2 />
+      <HomeSection7 />
     </main>
   );
 }

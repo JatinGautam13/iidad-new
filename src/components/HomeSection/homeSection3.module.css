@@ -1,0 +1,92 @@
+.page5 {
+  position: relative;
+  width: 100%;
+  /* background: #181818; */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: default;
+  padding: 100px 0;
+}
+
+.elem, .elem2 {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.elem h1, .elem2 h1 {
+  font-size: 3vw;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: transparent;
+  display: inline-block;
+  margin-right: 10px;
+  height: fit-content;
+  animation-name: slide;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.elem2 h1 {
+  animation-direction: reverse;
+  transform: translateX(calc(-100% - 20px));
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+.elem span, .elem2 span {
+  font-style: italic;
+  font-family: "serif";
+  color: transparent;
+  border-bottom: 2.5px solid #fff;
+  -webkit-text-stroke: 1.5px #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .page5 {
+  }
+  .elem h1, .elem2 h1 {
+    font-size: 3.7rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .page5 {
+    height: auto;
+    min-height: 280px;
+    /* padding: 40px 16px; */
+    justify-content: center;
+  }
+  .elem, .elem2 {
+    margin-bottom: -1vw;
+  }
+  .elem h1, .elem2 h1 {
+    font-size: 2.2rem;
+    -webkit-text-stroke: 0.8px #fff;
+    margin-bottom: 8px;
+  }
+  .elem span, .elem2 span {
+    border-bottom-width: 1.5px;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+@media (max-width: 400px) {
+  .elem h1, .elem2 h1 {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0.7px #fff;
+  }
+}

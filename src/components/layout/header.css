@@ -1,0 +1,393 @@
+.header {
+position: fixed;
+  padding: 0;          /* REMOVE left & right padding */
+  top: 20px;
+  right: 40px;          
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10000 ;
+  
+  /* background: #0f0f0f; */
+
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 17px;
+  border-radius: 10px;
+  background-color: #0f0f0f;
+  
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+
+}
+
+.nav-btn {
+background: rgba(255, 255, 255, 0.08);
+border: none;
+padding: 16px 28px; /* bigger buttons */
+border-radius: 8px; /* reduced */
+color: #ffffff;
+font-size: 16px; /* bigger text */
+cursor: pointer;
+display: inline-flex;
+white-space: nowrap;
+flex-wrap: nowrap;
+}
+
+/* --------------- */
+/* DROPDOWN POSITION */
+
+/* HORIZONTAL FULL-WIDTH MEGA MENU */
+.mega-menu {
+  position: absolute;
+  top: 70px;
+  right:  -40px;
+  width: 100vw;
+  list-style-type: none;
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;                     /* NEW → spacing between items */ /* NEW → even spacing */
+  padding: 25px 0px;
+  z-index: 2000;
+
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 14px;
+  
+}
+
+
+/* SHOW DROPDOWN ON HOVER */
+.dropdown-wrapper:hover .mega-menu {
+  display: grid;
+}
+/* .dropdown-wrapper .mega-menu { display: none; }
+.dropdown-wrapper:hover .mega-menu { display: grid; } */
+
+
+
+/* BOX STYLES */
+.mega-item {
+  margin: 0;
+  padding: 35px;
+  border-radius: 18px;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;           /* NEW → consistent height */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Background Colors */
+.green { background: #9ff69a; }
+.yellow { background: #f0f06e; }
+.blue { background: #6e6dff; }
+
+/* Hover effect */
+.mega-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* TEXT BLOCK */
+.text-block {
+  display: flex;
+  flex-direction: column;           /* NEW */
+  align-items: flex-start;          /* NEW */
+  cursor: default;
+}
+
+.text-block h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.text-block p {
+  margin-top: 12px;
+  font-size: 17px;
+  opacity: 0.85;
+}
+
+/* ARROW BUTTON */
+.arrow-box {
+  width: 46px;
+  height: 46px;
+
+  border: 2px solid rgba(0,0,0,0.7);
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  align-self: flex-end;
+  transition: 0.25s;
+}
+
+.mega-item:hover .arrow-box {
+  background: #000;
+  color: #fff;
+}
+
+/* ------- */
+
+.divider {
+width: 1px;
+height: 25px;
+background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 22px 6px 6px;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  transition: background 0.35s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle {
+  width: 38px;
+  height: 38px;
+  background: #9fff8b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.arrow {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.35s ease;
+}
+
+.contact-text {
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+/* HOVER — circle moves right, text moves left */
+.contact-btn:hover {
+  background: #9fff8b;
+}
+
+.contact-btn:hover .circle {
+  background: #000;
+  transform: translateX(84px);   /* move circle right */
+}
+
+.contact-btn:hover .contact-text {
+  transform: translateX(-40px);  /* move text left */
+  color: #000;
+}
+
+.contact-btn:hover .arrow {
+  color: #9fff8b;
+}
+
+.arrow {
+font-size: 16px;
+font-weight: 1000;
+}
+
+
+
+
+
+
+
+
+/* 2nd Menu */
+
+/* WRAPPER */
+.menu-wrapper {
+  position: relative;
+}
+
+/* BUTTON */
+.menu-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 14px 26px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* DROPDOWN LIST */
+.dropdown-list {
+  position: absolute;
+  top: 65px;
+  left: 0;
+
+  list-style-type: none;
+  padding: 20px 0;
+  margin: 0;
+
+  width: 260px;
+
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+
+  border-radius: 10px;
+
+  display: none;
+  flex-direction: column;
+
+  z-index: 2000;
+}
+
+/* SHOW ON HOVER */
+.menu-wrapper:hover .dropdown-list {
+  display: flex;
+}
+
+/* ITEMS */
+.dropdown-item {
+  padding: 14px 20px;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+/* HOVER */
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(4px);
+}
+
+/* TEXT */
+.item-text {
+  font-size: 16px;
+}
+
+/* ARROW */
+.item-arrow {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.dropdown-item:hover .item-arrow {
+  transform: translateX(5px);
+}
+
+
+.delay-dropdown.open-now .mega-menu {
+  display: grid !important;
+}
+
+.delay-dropdown.open-now .dropdown-list {
+  display: flex !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================== */
+/*  MOBILE RESPONSIVE BEHAVIOR     */
+/* =============================== */
+@media (max-width: 752px) {
+  .header{
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .nav {
+    gap: 12px;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.5);
+  }
+  .menu-wrapper {
+    display: none !important;
+  }
+  .dropdown-wrapper,
+  .contact-btn {
+    display: flex !important;
+  }
+  /* Make mega-menu NOT full screen width in mobile */
+  .mega-menu {
+    width: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto;
+    min-width: 220px;
+    max-width: 95vw;
+    grid-template-columns: 1fr;
+    padding: 18px 14px;
+    top: 80px;
+  }
+  .mega-item {
+    height: auto;
+    padding: 20px;
+  }
+  .mega-item h3 {
+    font-size: 20px;
+  }
+  .mega-item p {
+    font-size: 15px;
+  }
+  .contact-btn {
+    padding: 4px 18px 4px 6px;
+    gap: 10px;
+  }
+  .circle {
+    width: 32px;
+    height: 32px;
+  }
+  .contact-btn:hover .circle {
+    transform: translateX(80px);
+  }
+  .contact-btn:hover .contact-text {
+    transform: translateX(-25px);
+  }
+}
+
+@media (max-width: 429px) {
+}
+
+@media (max-width: 374px) {
+  
+}
+
+
+@media (max-width: 357px) {
+
+}
