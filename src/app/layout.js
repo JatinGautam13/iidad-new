@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import LayoutWrapper from "@/components/LayoutWrapper";
 import StructuredData from "@/components/StructuredData";
 
 const geistSans = Geist({
@@ -94,11 +93,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <div data-scroll-container>
+        <LayoutWrapper>
           {children}
-        </div>
-       <Footer />
+        </LayoutWrapper>
       </body>
     </html>
   );
