@@ -2,16 +2,15 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "@/components/HomeSection/homeSection7.module.css";
 
-const avatarUrl = "/image-vid/iiiiii.png";
 const people = [
-  { name: "Dr. Priya Sharma", role: "UI/UX Design Faculty", img: avatarUrl, desc: "Award-winning designer with 15+ years of experience in user experience design. Former design lead at Google and Microsoft." },
-  { name: "Rahul Mehta", role: "Web Development Lead", img: avatarUrl, desc: "Full-stack developer and tech evangelist. Built scalable applications for Fortune 500 companies and mentored 500+ developers." },
-  { name: "Ananya Patel", role: "Graphic Design Expert", img: avatarUrl, desc: "Creative director specializing in brand identity and visual communication. Work featured in international design publications." },
-  { name: "Vikram Singh", role: "Product Design Head", img: avatarUrl, desc: "Industrial designer and innovation consultant. Led design teams at Apple and Samsung, holder of multiple design patents." },
-  { name: "Sneha Kapoor", role: "Alumni - UI Designer", img: avatarUrl, desc: "IIDAD alumna now working as Senior UI Designer at Adobe. Credits IIDAD for launching her successful design career." },
-  { name: "Arjun Reddy", role: "Alumni - Full Stack Dev", img: avatarUrl, desc: "Graduated from IIDAD's web development program, now building innovative startups and mentoring aspiring developers." },
-  { name: "Maya Iyer", role: "Motion Design Faculty", img: avatarUrl, desc: "Animation and motion graphics specialist. Created visuals for major film studios and advertising campaigns worldwide." },
-  { name: "Karthik Nair", role: "Alumni - Product Manager", img: avatarUrl, desc: "IIDAD graduate leading product development at Amazon. Combines design thinking with technical excellence." },
+  { name: "Dr. Priya Sharma", role: "UI/UX Design Faculty", img: "/teamPic/Gemini_Generated_Image_3gmign3gmign3gmi (1).png", desc: "Award-winning designer with 15+ years of experience in user experience design. Former design lead at Google and Microsoft." },
+  { name: "Rahul Mehta", role: "Web Development Lead", img: "/teamPic/Gemini_Generated_Image_ggtlqfggtlqfggtl.png", desc: "Full-stack developer and tech evangelist. Built scalable applications for Fortune 500 companies and mentored 500+ developers." },
+  { name: "Ananya Patel", role: "Graphic Design Expert", img: "/teamPic/Gemini_Generated_Image_iv7bbgiv7bbgiv7b.png", desc: "Creative director specializing in brand identity and visual communication. Work featured in international design publications." },
+  { name: "Vikram Singh", role: "Product Design Head", img: "/teamPic/manjeet3.jpeg", desc: "Industrial designer and innovation consultant. Led design teams at Apple and Samsung, holder of multiple design patents." },
+  { name: "Sneha Kapoor", role: "Alumni - UI Designer", img: "/teamPic/Gemini_Generated_Image_3gmign3gmign3gmi (1).png", desc: "IIDAD alumna now working as Senior UI Designer at Adobe. Credits IIDAD for launching her successful design career." },
+  { name: "Arjun Reddy", role: "Alumni - Full Stack Dev", img: "/teamPic/Gemini_Generated_Image_ggtlqfggtlqfggtl.png", desc: "Graduated from IIDAD's web development program, now building innovative startups and mentoring aspiring developers." },
+  { name: "Maya Iyer", role: "Motion Design Faculty", img: "/teamPic/Gemini_Generated_Image_iv7bbgiv7bbgiv7b.png", desc: "Animation and motion graphics specialist. Created visuals for major film studios and advertising campaigns worldwide." },
+  { name: "Karthik Nair", role: "Alumni - Product Manager", img: "/teamPic/manjeet3.jpeg", desc: "IIDAD graduate leading product development at Amazon. Combines design thinking with technical excellence." },
 ];
 
 // Simple touch device check  
