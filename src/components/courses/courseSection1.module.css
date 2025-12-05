@@ -15,7 +15,7 @@
   right: 0;
   width: 50%;
   height: 100%;
-  background: url('/uploads/graphic (1).png') no-repeat center right;
+  /* background: url('/uploads/graphic (1).png') no-repeat center right; */
   background-size: contain;
   opacity: 0.1;
   pointer-events: none;
@@ -120,7 +120,7 @@
 .bgGraphic {
   position: absolute;
   right: -10%;
-  top: 50%;
+  top: 62%;
   transform: translateY(-50%);
   width: 110%;
   height: auto;
@@ -132,7 +132,7 @@
 .personImage {
   position: relative;
   z-index: 2;
-  height: 100%;
+  height: 110%;
   width: auto;
   object-fit: contain;
 }
